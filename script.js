@@ -41,7 +41,7 @@ const CONFIG = {
             cardTitle: 'Clustering Parameters',
             gridCols: 3,
             inputs: [
-                { id: 'client_page_id', label: 'Client page ID', placeholder: '500', type: 'text', help: 'Target volume for high-level pillar keywords.' },
+                { id: 'keyword_database', label: 'Keyword Database URL', placeholder: 'Enter database URL...', type: 'text' },
                 { id: 'volume_threshold', label: 'Volume threshold', placeholder: '600', type: 'number', help: 'Minimum threshold for supporting long-tail variations.' },
                 { id: 'num_articles', label: 'Number of articles', placeholder: '2', type: 'number', help: 'Total number of articles to generate for the cluster.' }
             ]
@@ -149,7 +149,7 @@ function loadPage(pageId) {
             inputField = `
                 <div class="input-with-icon">
                     ${input.icon ? `<i class="${input.icon} input-field-icon"></i>` : ''}
-                    <input type="${input.type}" id="${input.id}" class="form-control ${input.icon ? 'has-icon' : ''}" value="${input.placeholder || ''}" placeholder="${input.placeholder}">
+                    <input type="${input.type}" id="${input.id}" class="form-control ${input.icon ? 'has-icon' : ''}" placeholder="${input.placeholder}">
                 </div>
             `;
         }
