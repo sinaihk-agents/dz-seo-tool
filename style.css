@@ -147,40 +147,6 @@ body {
     border-radius: 50%;
 }
 
-/* Sidebar Usage */
-.usage-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.usage-label {
-    font-size: 10px;
-    font-weight: 700;
-    color: #64748b;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-.usage-bar {
-    width: 100%;
-    height: 6px;
-    background: #f1f5f9;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.usage-progress {
-    height: 100%;
-    background: var(--primary-color);
-    border-radius: 3px;
-}
-
-.usage-stats {
-    font-size: 11px;
-    color: var(--text-muted);
-}
-
 /* Main Content Styling */
 .main-content {
     flex: 1;
