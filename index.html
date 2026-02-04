@@ -1,53 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SEO Strategy Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Hub | Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-    <div id="app" class="app-container">
-        <!-- Header -->
-        <header class="app-header">
-            <button class="icon-btn" id="back-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <h1 id="screen-title">Keyword Planning Strategy</h1>
-            <button class="icon-btn" id="options-btn"><i class="fa-solid fa-sliders"></i></button>
-        </header>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <span class="logo-text">SEO Hub</span>
+            </div>
 
-        <!-- Main Content Area (SPA Screens) -->
-        <main class="app-content" id="screen-container">
-            <!-- Screens will be injected here via JavaScript -->
+            <nav class="navigation">
+                <div class="nav-section">
+                    <h3>SEO Tools</h3>
+                    <p class="nav-subtitle">Audit & Automation</p>
+                </div>
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="#" class="nav-item active" data-page="keyword-planning">
+                            <i class="fas fa-compass"></i>
+                            <span>Keyword Planning</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-page="meta-data">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Meta Data</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-page="keyword-clustering">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Keyword Clustering</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-page="on-page-seo">
+                            <i class="fas fa-file-code"></i>
+                            <span>On-Page SEO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-item" data-page="technical-audit">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>Technical Audit</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="usage-container">
+                    <div class="usage-label">USAGE</div>
+                    <div class="usage-bar">
+                        <div class="usage-progress" style="width: 65%;"></div>
+                    </div>
+                    <div class="usage-stats">650 / 1,000 Credits used</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-breadcrumb">
+                    <span class="breadcrumb-root">SEO Hub</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current" id="current-page-breadcrumb">Keyword Planning</span>
+                </div>
+
+                <div class="header-actions">
+                    <button class="icon-btn"><i class="fas fa-cog"></i></button>
+                    <button class="icon-btn notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                    <a href="https://drive.google.com/drive/folders/1VQlH3f7BVsWB5wViz0OzAnPJeDnOLcf1?usp=drive_link"
+                        target="_blank" class="drive-btn">
+                        <i class="fab fa-google-drive"></i>
+                        Go to my Google Drive
+                    </a>
+                    <div class="user-avatar">
+                        <img src="https://ui-avatars.com/api/?name=User&background=f0f0f0&color=d0d0d0" alt="User">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content Area -->
+            <div id="page-content" class="page-content">
+                <!-- Content will be injected by script.js -->
+            </div>
         </main>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <button class="nav-item active" data-screen="planning">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <span>Planning</span>
-            </button>
-            <button class="nav-item" data-screen="crawl">
-                <i class="fa-solid fa-globe"></i>
-                <span>Crawl</span>
-            </button>
-            <button class="nav-item" data-screen="cluster">
-                <i class="fa-solid fa-layer-group"></i>
-                <span>Cluster</span>
-            </button>
-            <button class="nav-item" data-screen="on-page">
-                <i class="fa-solid fa-file-lines"></i>
-                <span>On-Page</span>
-            </button>
-            <button class="nav-item" data-screen="technical">
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>Technical</span>
-            </button>
-        </nav>
     </div>
 
-    <script src="app.js"></script>
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h2 class="modal-title">Task Started!</h2>
+            <p class="modal-message" id="modal-message">Your SEO task has been successfully triggered and is now running
+                in the background.</p>
+            <button class="btn-primary modal-close-btn" id="close-modal">Got it, thanks!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

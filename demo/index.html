@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SEO Strategy Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <button class="icon-btn" id="back-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <h1 id="screen-title">Keyword Planning Strategy</h1>
+            <button class="icon-btn" id="options-btn"><i class="fa-solid fa-sliders"></i></button>
+        </header>
+
+        <!-- Main Content Area (SPA Screens) -->
+        <main class="app-content" id="screen-container">
+            <!-- Screens will be injected here via JavaScript -->
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-screen="planning">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Planning</span>
+            </button>
+            <button class="nav-item" data-screen="crawl">
+                <i class="fa-solid fa-globe"></i>
+                <span>Crawl</span>
+            </button>
+            <button class="nav-item" data-screen="cluster">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Cluster</span>
+            </button>
+            <button class="nav-item" data-screen="on-page">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>On-Page</span>
+            </button>
+            <button class="nav-item" data-screen="technical">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Technical</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
